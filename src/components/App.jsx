@@ -20,21 +20,22 @@ class App extends Component{
     return(
       
         
-        <div  style={{marginLeft:'10px'}}>
+        <div className='wrapper app-wrapper'>
+          <div  style={{marginLeft:'10px'}}>
           <h2><strong>Asset Management System</strong></h2>
           <h4 id='headingWelcome'>Welcome <em>{email}</em></h4>
                <button type="button" class="btn btn-danger btn-sm" onClick={()=>this.signOut()}>
                       <span className="glyphicon glyphicon-off"></span>  
                </button>
           <hr/>
-            <div className='container'>
+            <div className='container app-container'>
               <div className='row'>
-                <div className= 'col-md-6 ListAssets-container' style={{backgroundColor:'red'}}><ListAssets/></div>
-                <div className='col-md-6 RequestToAdmin-container' style={{backgroundColor:'blue'}}><RequestToAdmin/></div> 
+                <div ><ListAssets/></div>
+                <div ><RequestToAdmin/></div> 
                 
               </div>
             </div>
-           
+           </div>
           </div>
         
     );

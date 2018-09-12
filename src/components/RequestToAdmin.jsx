@@ -40,9 +40,9 @@ class RequestButton extends Component{
   render(){
     console.log('this.props',this.props);
     return(
-      <div>
+      <div className='col-md-6 RequestToAdmin-container'>
         
-            <h3><u>Assets available to request</u></h3>
+            <h3 style={{color:'#FAEB03'}}><u>Assets available to request</u></h3>
             <div style={{marginLeft:'5px'}}>
             {this.props.assets.map((eachasset,index)=>{
 

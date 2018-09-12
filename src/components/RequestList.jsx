@@ -24,8 +24,8 @@ class Requestlist extends Component{
     //console.log('this.props', this.props);
     return(
 
-      <div className='col-md-6 Requestlist-container' style={{backgroundColor:'blue'}}>
-        <h3>Requests pending</h3>
+      <div className='col-md-6 Requestlist-container'>
+        <h3 style={{color:'#FAEB03'}}><u>Requests pending</u></h3>
         <div>
           {
             this.props.requests.map((eachrequest,index)=>{

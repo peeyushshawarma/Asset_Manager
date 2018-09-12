@@ -1,5 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:100,200,300,300i,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+body {
+  font-family: "Open Sans", serif;
+}
 
 
-.col-md-6 assetsavailable-container{
-  background-color: #1C0691; 
+.app-wrapper{
+  background: linear-gradient(to right, #24677A, #18A5CD);
+  height: 100vh;
+  
+}
+
+.AdminPage-wrapper{
+  background: linear-gradient(to right, #24677A, #18A5CD);
+  height: 100vh;
+  
+}
+
+.assetsavailable-container{
+  background-color: rgba(24,71,165,1); 
+  border-radius: 10px;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+}
+
+.app-container{
+  color: #F0F3F4;
+}
+
+.AdminPage-container{
+  color: #F0F3F4;
+}
+
+.Requestlist-container{
+  border-radius: 10px;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  background-color: rgba(24,71,165,1); 
+}
+
+.ListAssets-container{
+  border-radius: 10px;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  background-color: rgba(24,71,165,1);
+}
+
+.RequestToAdmin-container{
+  border-radius: 10px;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  background-color: rgba(24,71,165,1);
 }

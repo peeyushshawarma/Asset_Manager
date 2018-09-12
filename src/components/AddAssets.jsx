@@ -22,7 +22,7 @@ class AddAssets extends Component{
   render(){
     return(
       <div className='form-inline pull-right'>
-        <h3>Assets available to assign</h3>
+        <h3 style={{color:'#FAEB03'}}><u>Assets available to assign</u></h3>
         <DropdownButton title='AssetType' >
             
                         <MenuItem eventKey={1} onSelect={event=>this.setState({assettype:'Hardware'})}> Hardware</MenuItem> 

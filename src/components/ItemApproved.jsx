@@ -7,11 +7,11 @@ class ItemApproved extends Component{
     const {email}= this.props.user;
     return(
       <div>
-        {asset}
+        <strong>{asset}</strong>
         &nbsp;
         <span>
-          <button className='btn btn-link btn-xs'>
-            surrender
+          <button className='btn btn-link btn-xs' style={{color:'#27AE60'}}>
+            <u>surrender</u>
           </button>
         </span>
       </div>

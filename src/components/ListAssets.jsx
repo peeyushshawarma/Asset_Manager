@@ -6,8 +6,8 @@ class ListAssets extends Component{
 
   render(){
     return(
-      <div>
-        <h3><u>Assets possessed by you</u></h3>
+      <div className= 'col-md-6 ListAssets-container' >
+        <h3 style={{color:'#FAEB03'}}><u>Assets possessed by you</u></h3>
         <AssetsApproved/>
       </div>
     );
