@@ -1,0 +1,4 @@
+export const SET_USER = 'SET_USER';
+export const SET_ASSETS= 'SET_ASSETS';
+export const SET_REQUESTS= 'SET_REQUESTS';
+export const SET_APPROVEDREQUEST= 'SET_APPROVEDREQUEST';
