@@ -16,8 +16,9 @@ class AdminPage extends Component{
   render(){
     const {email}= this.props.user;
     return(
-      
       <div className='wrapper AdminPage-wrapper'>
+
+      <div >
                 <h2><strong>Asset Management System</strong></h2>
                 <h4 id='headingWelcome'>Welcome <em>{email}</em></h4>
                  <button type="button" class="btn btn-danger btn-sm" onClick={()=>this.signOut()}>
@@ -29,7 +30,8 @@ class AdminPage extends Component{
             <RequestList/><AssetsAvailable/>
           </div>
         </div>
-        
+      </div>
+
       </div>
     );
   }

@@ -25,27 +25,30 @@ class SignUp extends Component{
   }
   render(){
     return(
-        <div style={{marginLeft:'10px'}}>
-          <h2>Sign up</h2>
-          <div className='form-inline'>
+      <div align='center' className='wrapper root-signup'>
+        <div className='container signup-cont'>
+          <h2 style={{color:'yellow'}}>Sign up</h2>
+        
             <div className='form-group'>
               <input 
                 placeholder='email'
                 className='form-control' 
                 type='text'
-                style={{marginRight:'5px'}}
+                style={{marginBottom:'5px', width:'50%'}}
                 onChange={event=>this.setState({email:event.target.value})}
               />
               <input 
                 placeholder='password'
                 className='form-control'
                 type='password'
+                style={{marginBottom:'5px',width:'50%'}}
                 onChange={event=>this.setState({password:event.target.value})}
               />
               <button 
                 className='btn btn-primary' 
                 style={{marginLeft:'5px'}}
                 onClick={()=>this.signUp()}
+                style={{marginBottom:'5px'}}
               > 
                 Sign Up
               </button>
@@ -55,9 +58,9 @@ class SignUp extends Component{
             </div>
 
             
-          </div>
-          <hr/>
-      
+          
+          
+        </div>
         </div>
       );
   }

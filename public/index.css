@@ -4,6 +4,10 @@
 
 body {
   font-family: "Open Sans", serif;
+  background: linear-gradient(to right, #24677A, #18A5CD);
+}
+html,body{
+margin:0;
 }
 
 
@@ -14,8 +18,8 @@ body {
 }
 
 .AdminPage-wrapper{
-  background: linear-gradient(to right, #24677A, #18A5CD);
-  height: 100vh;
+  
+  
   
 }
 
@@ -49,4 +53,36 @@ body {
   border-radius: 10px;
   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
   background-color: rgba(24,71,165,1);
+}
+
+.signin-cont{
+  display: inline-block;
+  background-color: rgba(24,71,165,1);
+  border-radius: 10px;
+  margin-top: 100px;
+  width: 50%;
+  padding: 70px 0;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+}
+
+.root-signin{
+  background: linear-gradient(to right, #24677A, #18A5CD);
+  height: 100vh;
+}
+
+
+.root-signup{
+  background: linear-gradient(to right, #24677A, #18A5CD);
+  height: 100vh;
+
+}
+
+.signup-cont{
+  display: inline-block;
+  background-color: rgba(24,71,165,1);
+  border-radius: 10px;
+  margin-top: 100px;
+  width: 50%;
+  padding: 70px 0;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
 }
