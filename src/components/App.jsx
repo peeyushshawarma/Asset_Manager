@@ -15,7 +15,7 @@ class App extends Component{
   }
 
   render(){
-    console.log('this.props', this.props);
+    //console.log('this.props', this.props);
     const {email} =this.props.user;
     return(
       
@@ -24,7 +24,7 @@ class App extends Component{
           <div  style={{marginLeft:'10px'}}>
           <h2><strong>Asset Management System</strong></h2>
           <h4 id='headingWelcome'>Welcome <em>{email}</em></h4>
-               <button type="button" class="btn btn-danger btn-sm" onClick={()=>this.signOut()}>
+               <button type="button" className="btn btn-danger btn-sm" onClick={()=>this.signOut()}>
                       <span className="glyphicon glyphicon-off"></span>  
                </button>
           <hr/>

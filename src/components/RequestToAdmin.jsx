@@ -1,25 +1,12 @@
 import React,{Component} from 'react';
 import UserRequestedItem from './UserRequestedItem';
-import {assetRef, approvedRef} from '../firebase';
+import {assetRef} from '../firebase';
 import {connect} from 'react-redux';
-import {availableAsset, approvedAsset} from '../actions';
+import {availableAsset} from '../actions';
 
 class RequestButton extends Component{
 
-   componentDidMount(){
-    
-    approvedRef.on('value', snap=>{
-      let approvedAssets=[];
-      snap.forEach(approvedAssetItem=>{
-        const {asset}=approvedAssetItem.val();
-        const serverKey= approvedAssetItem.key;
-
-        approvedAssets.push({asset,serverKey});
-      })
-      
-      this.props.approvedAsset(approvedAssets);
-    })
-  }
+   
  
     componentDidMount(){
     assetRef.on('value', snap=>{
@@ -38,7 +25,7 @@ class RequestButton extends Component{
  
 
   render(){
-    console.log('this.props',this.props);
+    //console.log('this.props',this.props);
     return(
       <div className='col-md-6 RequestToAdmin-container'>
         
@@ -59,13 +46,13 @@ class RequestButton extends Component{
 }
 
 function mapStateToProps(state){
-  const {assets, user, approvedAssets} =state;
+  const {assets, user} =state;
   return{
     assets,
-    user,
-    approvedAssets
+    user
+    
   }
 }
 
-export default connect (mapStateToProps,{availableAsset, approvedAsset})(RequestButton);
+export default connect (mapStateToProps,{availableAsset})(RequestButton);
  

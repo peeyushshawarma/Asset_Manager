@@ -6,6 +6,7 @@ body {
   font-family: "Open Sans", serif;
   background: linear-gradient(to right, #24677A, #18A5CD);
 }
+
 html,body{
 margin:0;
 }
@@ -17,11 +18,6 @@ margin:0;
   
 }
 
-.AdminPage-wrapper{
-  
-  
-  
-}
 
 .assetsavailable-container{
   background-color: rgba(24,71,165,1); 

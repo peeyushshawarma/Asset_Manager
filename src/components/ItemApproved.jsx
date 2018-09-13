@@ -8,9 +8,9 @@ class ItemApproved extends Component{
     approvedRef.child(approvedReqKey).remove();
   }
   render(){
-    console.log('this.props', this.props);
+    //console.log('this.props', this.props);
     const {asset,approvedReqKey} = this.props.eachApproval;
-    const {email}= this.props.user;
+    //const {email}= this.props.user;
     return(
       <div>
         <strong>{asset}</strong>

@@ -28,9 +28,9 @@ class AssetList extends Component{
         this.props.assets.map((everyasset,index)=>{
             return(
 
-              <ul>
+              <ul key={index}>
               <br/>
-              <li key={index}><AvailableAssetItem key={index} asset={everyasset}/></li>
+              <li ><AvailableAssetItem key={index} asset={everyasset}/></li>
               </ul>
               )
         })

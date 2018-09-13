@@ -5,6 +5,8 @@ import {assetRef} from '../firebase';
 
 class RequestItem extends Component{
 
+
+  //to approve a request
   approve = () => {
     const {asset, serverKey, email,requestKey} = this.props.request;
 
@@ -23,20 +25,23 @@ class RequestItem extends Component{
                          })
   }
 
+  //to cancel a request
   cancel(){
-    const {asset, serverKey, email,requestKey} = this.props.request;
+    const {requestKey} = this.props.request;
     requestRef.child(requestKey).remove();
   }
 
+
+
   render(){
     //console.log('this.props',this.props);
-    const {asset, serverKey, email,requestKey} = this.props.request;
+    const {asset, email} = this.props.request;
     return(
         <div><strong>{asset}</strong> 
         <span>
 
           <button 
-            type="button" class="btn btn-link btn-xs" 
+            type="button" className="btn btn-link btn-xs" 
             style={{marginLeft:'10px'}}
             onClick={()=>this.approve()}      //approve button
             >
@@ -44,7 +49,7 @@ class RequestItem extends Component{
           </button>
           
           <button 
-            type="button" class="btn btn-link btn-xs"     //cancel button
+            type="button" className="btn btn-link btn-xs"     //cancel button
             onClick={()=>this.cancel()}
           >
             <u>Cancel</u>

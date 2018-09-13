@@ -30,8 +30,8 @@ class Requestlist extends Component{
           {
             this.props.requests.map((eachrequest,index)=>{
               return(
-                <ul>
-                  <li key={index}><RequestItem key={index} request={eachrequest}/></li>
+                <ul key={index}>
+                  <li ><RequestItem key={index} request={eachrequest}/></li>
                 </ul>
                   )
           })

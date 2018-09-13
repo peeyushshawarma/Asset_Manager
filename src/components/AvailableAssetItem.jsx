@@ -3,7 +3,8 @@ import {assetRef} from '../firebase';
 
 class AvailableAssetItem extends Component{
 
-  minusasset(serverKey, quantity){
+  //to manually decrease the number of items
+  minusasset(serverKey, quantity){       
     if(quantity>0){
       quantity= quantity-1;
 
@@ -14,33 +15,39 @@ class AvailableAssetItem extends Component{
 
  }
 
+ //to manually increase the number of items
   addasset(serverKey,quantity){
     quantity=quantity+1;
     assetRef.child(serverKey).child('quantity').transaction(()=>{return quantity});
   }
 
+
+  // to remove an item from the list
   Remove(serverKey){
+    if(window.confirm('Do You want to remove this item ?'))
     assetRef.child(serverKey).remove();
   }
 
+
+
   render(){
-    console.log('this.props', this.props.asset);
+    //console.log('this.props', this.props.asset);
     const {serverKey,asset,quantity}= this.props.asset;
   
     return(
       <div>
         <em>{asset} ({quantity})</em>
         &nbsp;
-        <button type="button" class="btn btn-default btn-xs" onClick={()=>this.minusasset(serverKey, quantity)}>
-          <span class="glyphicon glyphicon-minus"></span> 
+        <button type="button" className="btn btn-default btn-xs" onClick={()=>this.minusasset(serverKey, quantity)}>
+          <span className="glyphicon glyphicon-minus"></span> 
         </button>
-        <button type="button" class="btn btn-default btn-xs" onClick={()=>this.addasset(serverKey,quantity)}>
-          <span class="glyphicon glyphicon-plus"></span>
+        <button type="button" className="btn btn-default btn-xs" onClick={()=>this.addasset(serverKey,quantity)}>
+          <span className="glyphicon glyphicon-plus"></span>
         </button>
         <button 
-            type="button" class="btn btn-link btn-xs" 
+            type="button" className="btn btn-link btn-xs" 
             style={{marginLeft:'10px'}}
-            onClick={()=>this.Remove(serverKey)}      //approve button
+            onClick={()=>this.Remove(serverKey)}      
             >
             <u>Remove</u>
         </button>

@@ -28,13 +28,14 @@ class AssetsApproved extends Component{
           this.props.approvedAssets.map((eachApproval,index)=>{
             if(this.props.user.email===eachApproval.email){
             return(
-              <ul>
+              <ul key={index}>
               <br/>
                 <li><ItemApproved user={this.props.user} eachApproval={eachApproval} key={index}/></li>
               </ul>
                )
             }
           })
+
       }
       </div>
     );
